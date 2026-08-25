@@ -28,7 +28,7 @@ export interface Config {
 }
 
 export const Config: Schema<Config> = Schema.object({
-  token: Schema.string().optional(),
+  token: Schema.string(),
   enabled: Schema.boolean().default(true),
   endpoints: Schema.array(String).default(DEFAULT_ENDPOINTS),
   rejectStatus: Schema.union([Schema.const(401), Schema.const(403)]).default(401),

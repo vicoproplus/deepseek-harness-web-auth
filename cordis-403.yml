@@ -1,0 +1,12 @@
+# dsh-web-auth 插件 —— 用 --patch 把它插入 Web UI
+#
+# 用法（在 deepseek-harness 仓库根目录）：
+#   pnpm dsh web --patch E:/DSH/dsh-web-auth/cordis.yml
+# 注意：Windows 上插件 name 必须是 file:// URL（裸盘符路径会被 ESM loader 拒绝）
+- insert:
+    - id: web-auth
+      name: 'file:///E:/DSH/dsh-web-auth/src/index.ts'
+      config:
+        tokenMode: auto
+        rejectStatus: 403
+        allowNetworkExposure: false
