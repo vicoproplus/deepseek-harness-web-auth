@@ -1,0 +1,17 @@
+{
+  "name": "dsh-web-auth",
+  "version": "0.1.0",
+  "private": true,
+  "description": "dsh web 控制面鉴权插件：为 /api 端点强制 bearer token（CWE-306 修复）",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.spec.ts"
+  },
+  "dependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/schemastery": "*",
+    "@deepseek-ai/dsh-host-webserver": "*",
+    "@deepseek-ai/dsh-host-apiproxy": "*"
+  }
+}
