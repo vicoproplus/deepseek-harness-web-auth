@@ -1,0 +1,10 @@
+# dsh-web-auth 插件 —— Linux 挂载验证用 patch（本机 /mnt/f 挂载）
+# 用法（在 deepseek-harness 仓库根目录）：
+#   pnpm dsh web --patch /mnt/f/DSH/dsh-web-auth/cordis.linux.yml
+- insert:
+    - id: web-auth
+      name: '/mnt/f/DSH/dsh-web-auth/src/index.ts'
+      config:
+        tokenMode: auto
+        rejectStatus: 401
+        allowNetworkExposure: false
